@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Main section */
+.main {
+  background-image: url(Img/bg.jpg);
+  min-height: 70vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.main .box {
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.7;
+  background-color: black;
+}
+
+nav {
+  max-width: 60vw;
+  justify-content: space-between;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 62px;
+  position: relative;
+  z-index: 100;
+}
+
+nav img {
+  width: 114px;
+  z-index: 100;
+}
+
+nav button {
+  z-index: 100;
+}
+
+.hero {
+  position: absolute;
+  top: 62px;
+  left: 0;
+  height: calc(100% - 62px);
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  gap: 20px;
+}
+
+.hero > :nth-child(1) {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.hero > :nth-child(2),
+.hero > :nth-child(3) {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.hero-buttons {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+}
+
+.btn {
+  padding: 3px 8px;
+  font-weight: 400;
+  background-color: rgba(23, 23, 23, 0.021);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.348);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  padding: 3px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.btn-red-sm {
+  background-color: red;
+  color: white;
+}
+
+.main input {
+  padding: 7px 101px 8px 14px;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.7);
+  border: 1px solid rgba(255, 253, 253, 0.5);
+}
+
+.seperation {
+  height: 5px;
+  background-color: rgb(75, 75, 75);
+  position: relative;
+}
+
+/* Section for trending posters */
+.section {
+  padding: 30px 0;
+  min-height: 70vh;
+}
+
+.head {
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+.head h2 {
+  font-size: 28px;
+}
+
+.now-highlight {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+/* Grid layout for images */
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 20px;
+  padding: 0 50px;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.images img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.05);
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 50px;
+  min-height: 60vh;
+}
+
+.card {
+  background: linear-gradient(to bottom, #001788, #4e006c);
+  padding: 30px 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  text-align: left;
+  min-height: 150px;      /* Enough for short content */
+  max-height: 200px;      /* Prevents stretching too much */
+  overflow: hidden;  
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.card p {
+  color: rgb(255, 253, 253);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
